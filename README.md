@@ -4,6 +4,12 @@ Code and results for patch classification and animal-level scoring of mouse lung
 
 [中文说明](docs/README_zh.md) · [Methods](docs/METHODS_AND_LIMITATIONS.md) · [Patch generation](docs/PATCH_GENERATION.md) · [Reproducibility](docs/REPRODUCING.md) · [Data](data/README.md) · [Results](results/README.md)
 
+## Project context and contribution
+
+This repository presents my computational pathology work for a collaborative study of mouse lung injury following heat and ozone exposure. My work includes preparing QuPath patches from existing annotations, developing and running ViT training and inference workflows, and analyzing and visualizing model results. The reconstruction and verification were carried out with AI assistance. Collaborators provided study materials and existing annotations; this repository does not represent the entire experimental study as my individual work.
+
+The study's [official repository](https://github.com/24110740024/VisualTransformer) is the source for this independent presentation. The imported study files retain their existing history, licenses, methods, results, and limitations. This repository builds on commit `14b154bd58b56605b0e87157e9c0c54c92d2d959`.
+
 ## Overview
 
 The implemented model (v6) fine-tunes an ImageNet-pretrained ViT-B/16 using class- and source-balanced sampling. Animal scores are obtained by averaging lesion probabilities over fixed whole-slide windows, with source-aware cross-fitting and an equal-weight average over three seeds.
